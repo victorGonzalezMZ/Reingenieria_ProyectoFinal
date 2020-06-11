@@ -1,0 +1,80 @@
+﻿@model LoginAndRegister_.NetFrameworkMVC_.Models.Proyecto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Proyecto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProyecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProyecto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreProyecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreProyecto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoProyecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoProyecto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreDesarrollador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreDesarrollador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAsignacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAsignacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioProyecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioProyecto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Delete", "Producto", FormMethod.Post)) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

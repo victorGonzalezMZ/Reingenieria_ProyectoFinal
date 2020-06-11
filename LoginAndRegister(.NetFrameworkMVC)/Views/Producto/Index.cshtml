@@ -1,0 +1,89 @@
+﻿@model IEnumerable<LoginAndRegister_.NetFrameworkMVC_.Models.Proyecto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gestión de Productos de Software</h2>
+
+<hr />
+
+<h5>
+    Usted como administrador tiene permiso para registrar o actualizar datos de Productos de Software.
+</h5>
+
+<p>
+    @Html.ActionLink("Registrar ó Actualizar", "AddOrEdit")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreProyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoProyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDesarrollador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAsignacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioProyecto)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreProyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoProyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDesarrollador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaAsignacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioProyecto)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdProyecto })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+<div class="row">
+    <div class="col-lg-6">
+        <h4>
+            @Html.ActionLink("To Home", "ToHome")
+        </h4>
+    </div>
+    <div class="col-lg-6">
+        <h4>
+            @Html.ActionLink("Logout", "Logout")
+        </h4>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <div class="row mt-5 mb-5">
+            <h1>Proyecto Reingeniería</h1>
+        </div>
+        <hr />
+        <p class="lead">Victor Emmanuel González  Martínez</p>
+        <p>3er Parcial</p>
+        <br />
+        <p>En este proyecto se puede Registrar, Consultar y Eliminar Empleados y Productos de software.</p>
+        <br />
+        <div class="row">
+            <ul>
+                <li>
+                    <h4>
+                        @Html.ActionLink("Empleados", "ToEmpleado")
+                    </h4>
+                </li>
+                <li>
+                    <h4>
+                        @Html.ActionLink("Productos", "ToProducto")
+                    </h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<h6>
+    @Html.ActionLink("Logout", "Logout")
+</h6>
